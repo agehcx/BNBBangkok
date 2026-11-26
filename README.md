@@ -24,3 +24,6 @@ npm run verify                               # CMC + Atlas connectivity proof
 ## Known gaps
 - Cournot's real endpoint/schema is unknown: `/api/agent` expects `COURNOT_API_URL` to accept `POST {claim}` → `{probability, evidence}`, else falls back to a CMC-volatility estimate (labelled `fallback` in UI/logs — do not submit fallback logs as Cournot proof).
 - The Atlas BSC Testnet feed address/ABI was not verified; set `ATLAS_ORACLE` / `NEXT_PUBLIC_ATLAS_ORACLE_ADDRESS` from the CMC×Atlas docs.
+
+## Design
+See [DESIGN.md](DESIGN.md) for palette, type and layout.
