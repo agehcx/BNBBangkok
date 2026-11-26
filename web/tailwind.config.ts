@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-// Dark-grey UI with badge-yellow accents; see ../DESIGN.md.
+// Dark-grey UI with badge-yellow accents; see ../docs/DESIGN.md.
 export default {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
