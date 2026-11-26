@@ -25,6 +25,14 @@ npm run verify                               # CMC + Atlas connectivity proof
 - Cournot's real endpoint/schema is unknown: `/api/agent` expects `COURNOT_API_URL` to accept `POST {claim}` → `{probability, evidence}`, else falls back to a CMC-volatility estimate (labelled `fallback` in UI/logs — do not submit fallback logs as Cournot proof).
 - The Atlas BSC Testnet feed address/ABI was not verified; set `ATLAS_ORACLE` / `NEXT_PUBLIC_ATLAS_ORACLE_ADDRESS` from the CMC×Atlas docs.
 
+## Poison Arena demo (`arena/`)
+A standalone Next.js app that visualises the same divergence/staleness guard as an attack demo: a Naive agent trusts one poisoned feed, a Guarded agent cross-checks CMC × Atlas and refuses. Seeded spike / stale / conflict scenarios, verdict + proof panels, server-side CMC & Atlas adapters with mock fallback.
+
+```bash
+cd arena && npm install && npm run dev   # http://localhost:3001
+```
+See [arena/README.md](arena/README.md).
+
 ## Docs
 - [docs/HACKATHON.md](docs/HACKATHON.md) — goal, tracks, deadline, deliverables
 - [docs/STATUS.md](docs/STATUS.md) — what is done and what is left
